@@ -52,6 +52,14 @@ class WarehouseTest {
 	}
 	
 	@Test
+	public void Kevins3Test() {		
+		Product newProduct = new Gadget("Test", new BigDecimal(50), 5);		
+		warehouseTest.addProduct(newProduct);		
+		assertEquals(newProduct.getDescription(), warehouseTest.getProducts().get(4).getDescription());
+		assertEquals(newProduct.getUnitPrice(), warehouseTest.getProducts().get(4).getUnitPrice());
+	}
+	
+	@Test
 	public void addProductTest() {		
 		Product newProduct = new Gadget("Test", new BigDecimal(50), 5);		
 		warehouseTest.addProduct(newProduct);		
