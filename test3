@@ -1,0 +1,107 @@
+package com.fidelity.warehouseTests;
+
+import static org.junit.jupiter.api.Assertions.*;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import com.fidelity.warehouse.Warehouse;
+import com.fidelity.exceptions.DoesNotExistInWarehouseException;
+import com.fidelity.exceptions.FullWarehouseException;
+import com.fidelity.products.Gadget;
+import com.fidelity.products.Product;
+import com.fidelity.products.Widget;
+
+class WarehouseTest {
+	private Warehouse warehouseTest;
+	private List<Product> products;
+	private RoundingMode roundingMode = RoundingMode.UP;
+    private int scale = 2;
+
+	@BeforeEach
+	public void setUp() {	
+		products = new ArrayList<>();	
+		Product p1 = new Widget("Widget 1", new BigDecimal(100), LocalDate.now().plusDays(5));
+		Product p2 = new Widget("Widget 2", new BigDecimal(20), LocalDate.now().plusDays(10));
+		Product p3 = new Gadget("Gadget 1", new BigDecimal(10), 10);
+		Product p4 = new Gadget("Gadget 2", new BigDecimal(50), 5);		
+		products.add(p1);
+		products.add(p2);
+		products.add(p3);
+		products.add(p4);		
+		warehouseTest = new Warehouse(products, 5);
+	}
+
+	@Test
+	public void KevinsTest() {		
+		Product newProduct = new Gadget("Kevin", new BigDecimal(50), 5);		
+		warehouseTest.addProduct(newProduct);		
+		assertEquals(newProduct.getDescription(), warehouseTest.getProducts().get(4).getDescription());
+		assertEquals(newProduct.getUnitPrice(), warehouseTest.getProducts().get(4).getUnitPrice());
+	}
+	
+	@Test
+	public void Kevins2Test() {		
+		Product newProduct = new Gadget("Test", new BigDecimal(50), 5);		
+		warehouseTest.addProduct(newProduct);		
+		assertEquals(newProduct.getDescription(), warehouseTest.getProducts().get(4).getDescription());
+		assertEquals(newProduct.getUnitPrice(), warehouseTest.getProducts().get(4).getUnitPrice());
+	}
+	
+	@Test
+	public void addProductTest() {		
+		Product newProduct = new Gadget("Test", new BigDecimal(50), 5);		
+		warehouseTest.addProduct(newProduct);		
+		assertEquals(newProduct.getDescription(), warehouseTest.getProducts().get(4).getDescription());
+		assertEquals(newProduct.getUnitPrice(), warehouseTest.getProducts().get(4).getUnitPrice());
+	}
+	
+	@Test
+	public void removeProductTest() {		
+		Product p4 = new Gadget("Gadget 2", new BigDecimal(50), 5);		
+		int size = warehouseTest.getProducts().size();		
+		warehouseTest.removeProduct(p4);		
+		assertNotEquals(size, warehouseTest.getProducts().size());		
+		boolean doesArrayListContain = warehouseTest.getProducts().contains(p4);		
+		assertEquals(false, doesArrayListContain);
+	}
+	
+	@Test
+	public void warehouseCapacityTest() {		
+		assertEquals(4, warehouseTest.getProducts().size());		
+		Product newProduct = new Gadget("Test", new BigDecimal(50), 5);		
+		warehouseTest.addProduct(newProduct);		
+		assertEquals(5, warehouseTest.getProducts().size());
+	}
+	
+	@Test
+	public void numberOfSpacesAvailableTest() {		
+		assertEquals(5, warehouseTest.getNumberOfProductsAllowedInWarehouse());
+	}
+	
+	@Test
+	public void totalValueOfInventoryTest() {		
+		assertEquals(new BigDecimal(470), warehouseTest.totalValueOfCurrentInventory());
+	}
+	
+	@Test
+	public void addProductExceptionTest() {		
+		Product newProduct1 = new Gadget("Test", new BigDecimal(50), 5);		
+		warehouseTest.addProduct(newProduct1);		
+		assertThrows(FullWarehouseException.class, () -> {			
+			Product newProduct2 = new Gadget("Test", new BigDecimal(50), 5);
+			warehouseTest.addProduct(newProduct2);
+		});
+	}
+	
+	@Test
+	public void removeProductExceptionTest() {		
+		assertThrows(DoesNotExistInWarehouseException.class, () -> {		
+		Product newProduct = new Gadget("Test", new BigDecimal(50), 5);
+		warehouseTest.removeProduct(newProduct);
+	});
+	}
+}
