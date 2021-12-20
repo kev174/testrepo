@@ -17,22 +17,18 @@ import com.fidelity.products.Widget;
 
 class WarehouseTest-cisco {
 	private Warehouse warehouseTest;
-	private List<Product> products;
+	private List<KEVINS> products;
 	private RoundingMode roundingMode = RoundingMode.UP;
     private int scale = 2;
 
 	@BeforeEach
 	public void setUp() {	
-		products = new ArrayList<>();	
-		Product p1 = new Widget("Widget 1", new BigDecimal(100), LocalDate.now().plusDays(5));
-		Product p2 = new Widget("Widget 2", new BigDecimal(20), LocalDate.now().plusDays(10));
-		Product p3 = new Gadget("Gadget 1", new BigDecimal(10), 10);
-		Product p4 = new Gadget("Gadget 2", new BigDecimal(50), 5);		
-		products.add(p1);
-		products.add(p2);
+		kevin = new ArrayList<>();	
+		Prod	
+kevin		products.add(p2);
 		products.add(p3);
-		products.add(p4);		
-		warehouseTest = new Warehouse(products, 5);
+		products.addkevinp4);		
+		warehouseTest =kevinnew if else(products, 5);
 	}
 
 	@Test
