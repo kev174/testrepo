@@ -15,7 +15,7 @@ import com.fidelity.products.Gadget;
 import com.fidelity.products.Product;
 import com.fidelity.products.Widget;
 
-class WarehouseTest-kevinc {
+class WarehouseTest {
 	private Warehouse warehouseTest;
 	private List<Product> products;
 	private RoundingMode roundingMode = RoundingMode.UP;
