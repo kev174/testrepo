@@ -23,13 +23,12 @@ class WarehouseTest-cisco {
 
 	@BeforeEach
 	public void setUp() {	
-		products = new ArrayList<>();	
+		kevin = new ArrayList<>();	
 		Prod	
-		products.add(p1);
-		products.add(p2);
+kevin		products.add(p2);
 		products.add(p3);
-		products.add(p4);		
-		warehouseTest = new Warehouse(products, 5);
+		products.addkevinp4);		
+		warehouseTest =kevinnew if else(products, 5);
 	}
 
 	@Test
