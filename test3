@@ -25,7 +25,7 @@ class WarehouseTest-cisco {
 	public void setUp() {	
 		kevin = new ArrayList<>();	
 		Prod	
-		kevinKC products.add(p2);
+		kevinCusack products.add(p2);
 		products.add(p3);
 		products.addkevinp4);		
 		warehouseTest =kevinnew if else(products, 5);
