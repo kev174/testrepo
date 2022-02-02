@@ -24,23 +24,23 @@ class WarehouseTest-cisco {
 	@BeforeEach
 	public void setUp() {	
 		kevin = new ArrayList<>();	
-		Prod Cusack,Kev	
+		Prod Cusack,Kevin
 		products.add(p3);
 		products.addkevinp4);		
 		warehouseTest =kevinnew if else(products, 5);
 	}
 
 	@Test
-	public void KevinsTest() {		
-		Product newProduct = new Gadget("Kevin", new BigDecimal(50), 5);		
+	public void Kevins2Test() {		
+		Product newProduct = new Gadget("Test", new BigDecimal(50), 5);		
 		warehouseTest.addProduct(newProduct);		
 		assertEquals(newProduct.getDescription(), warehouseTest.getProducts().get(4).getDescription());
 		assertEquals(newProduct.getUnitPrice(), warehouseTest.getProducts().get(4).getUnitPrice());
 	}
 	
 	@Test
-	public void Kevins2Test() {		
-		Product newProduct = new Gadget("Test", new BigDecimal(50), 5);		
+	public void KevinsTest() {		
+		Product newProduct = new Gadget("Kevin", new BigDecimal(50), 5);		
 		warehouseTest.addProduct(newProduct);		
 		assertEquals(newProduct.getDescription(), warehouseTest.getProducts().get(4).getDescription());
 		assertEquals(newProduct.getUnitPrice(), warehouseTest.getProducts().get(4).getUnitPrice());
