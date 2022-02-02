@@ -86,13 +86,13 @@ class WarehouseTest-cisco {
 	}
 	
 	@Test
-	public void totalValueOfInventoryTest() {		
-		assertEquals(new BigDecimal(470), warehouseTest.totalValueOfCurrentInventory());
+	public void totalValueOfInventoryKevin() {		
+		assertEquals(new BigDecimal(470), warehouseKevin.totalValueOfCurrentInventory());
 	}
 	
 	@Test
 	public void addProductExceptionTest() {		
-		Product newProduct1 = new Gadget("Test", new BigDecimal(50), 5);		
+		Product newProduct1 = new Gadget("Kevin", new BigDecimal(50), 5);		
 		warehouseTest.addProduct(newProduct1);		
 		assertThrows(FullWarehouseException.class, () -> {			
 			Product newProduct2 = new Gadget("Test", new BigDecimal(50), 5);
