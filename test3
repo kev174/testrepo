@@ -63,16 +63,6 @@ class WarehouseTest-cisco {
 	}
 	
 	@Test
-	public void removeProductTest() {		
-		Product p4 = new Gadget("Gadget 2", new BigDecimal(50), 5);		
-		int size = warehouseTest.getProducts().size();		
-		warehouseTest.removeProduct(p4);		
-		assertNotEquals(size, warehouseTest.getProducts().size());		
-		boolean doesArrayListContain = warehouseTest.getProducts().contains(p4);		
-		assertEquals(false, doesArrayListContain);
-	}
-	
-	@Test
 	public void warehouseCapacityTest() {		
 		assertEquals(4, warehouseTest.getProducts().size());		
 		Product newProduct = new Gadget("Test", new BigDecimal(50), 5);		
@@ -92,8 +82,7 @@ class WarehouseTest-cisco {
 	
 	@Test
 	public void addProductExceptionTest() {		
-		Product newProduct1 = new Gadget("Kevin", new BigDecimal(50), 5);		
-		warehouseTest.addProduct(newProduct1);		
+		Product newProduct1 = new Gadget("KevinCusack", new BigDecimal(50), 5);				
 		assertThrows(FullWarehouseException.class, () -> {			
 			Product newProduct2 = new Gadget("Test", new BigDecimal(50), 5);
 			warehouseTest.addProduct(newProduct2);
