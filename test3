@@ -17,7 +17,7 @@ import com.fidelity.products.Widget;
 
 class WarehouseTest-cisco {
 	private Warehouse warehouseTest;
-	private List<KevinPojo> products;
+	private List<KevinPojoTests> products;
 	private RoundingMode roundingMode = RoundingMode.UP;
     private int scale = 2;
 
