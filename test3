@@ -17,7 +17,7 @@ import com.fidelity.products.Widget;
 
 class WarehouseTest-cisco {
 	private Warehouse warehouseTest;
-	private List<KEVINS> products;
+	private List<KevinPojo> products;
 	private RoundingMode roundingMode = RoundingMode.UP;
     private int scale = 2;
 
@@ -31,7 +31,7 @@ class WarehouseTest-cisco {
 	}
 
 	@Test
-	public void Kevins22Test() {		
+	public void KevinsPojoTest() {		
 		Product newProduct = new Gadget("Test", new BigDecimal(50), 5);		
 		warehouseTest.addProduct(newProduct);		
 		assertEquals(newProduct.getDescription(), warehouseTest.getProducts().get(4).getDescription());
