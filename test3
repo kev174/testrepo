@@ -81,19 +81,19 @@ class WarehouseTest-cisco {
 	}
 	
 	@Test
+	public void removeProductExceptionTest() {		
+		assertThrows(DoesNotExistInWarehouseException.class, () -> {		
+		Product newProduct = new Gadget("Test", new BigDecimal(50), 5);
+		warehouseTest.removeProduct(newProduct);
+	});
+	}
+	
+	@Test
 	public void addProductExceptionTest() {		
 		Product newProduct1 = new Gadget("KevinCusack", new BigDecimal(50), 5);				
 		assertThrows(FullWarehouseException.class, () -> {			
 			Product newProduct2 = new Gadget("Test", new BigDecimal(50), 5);
 			warehouseTest.addProduct(newProduct2);
 		});
-	}
-	
-	@Test
-	public void removeProductExceptionTest() {		
-		assertThrows(DoesNotExistInWarehouseException.class, () -> {		
-		Product newProduct = new Gadget("Test", new BigDecimal(50), 5);
-		warehouseTest.removeProduct(newProduct);
-	});
 	}
 }
