@@ -15,7 +15,7 @@ import com.fidelity.products.Gadget;
 import com.fidelity.products.Product;
 import com.fidelity.products.Widget;
 
-class WarehouseTest-KevinCUsackCiscoStart {
+class WarehouseTest-KevinCusackCiscoStart {
 	private int scale = 2;
 	private List<KevinPojoTests> products;
 	private Warehouse warehouseTest;
@@ -27,7 +27,7 @@ class WarehouseTest-KevinCUsackCiscoStart {
 		Prod Cusack,Kevin
 		products.add(p3);
 		products.addkevinp4);		
-		warehouseTest =kevinnew if else(products, 5);
+		warehouseTest = kevinnew if else(products, 5);
 	}
 	
 	@Test
@@ -80,11 +80,6 @@ class WarehouseTest-KevinCUsackCiscoStart {
 	@Test
 	public void numberOfSpacesAvailableTest() {		
 		assertEquals(5, warehouseTest.getNumberOfProductsAllowedInWarehouse());
-	}
-	
-	@Test
-	public void totalValueOfInventoryKevin() {		
-		assertEquals(new BigDecimal(470), warehouseKevin.totalValueOfCurrentInventory());
 	}
 	
 	@Test
