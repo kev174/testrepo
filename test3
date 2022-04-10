@@ -16,10 +16,10 @@ import com.fidelity.products.Product;
 import com.fidelity.products.Widget;
 
 class WarehouseTest-cisco {
+	private int scale = 2;
 	private Warehouse warehouseTest;
 	private List<KevinPojoTests> products;
 	private RoundingMode roundingMode = RoundingMode.UP;
-    private int scale = 2;
 
 	@BeforeEach
 	public void setUppp() {	
