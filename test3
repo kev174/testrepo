@@ -15,7 +15,7 @@ import com.fidelity.products.Gadget;
 import com.fidelity.products.Product;
 import com.fidelity.products.Widget;
 
-class WarehouseTest-cisco {
+class WarehouseTest-KevinCUsackCiscoStart {
 	private int scale = 2;
 	private List<KevinPojoTests> products;
 	private Warehouse warehouseTest;
