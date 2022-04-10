@@ -15,7 +15,7 @@ import com.fidelity.products.Gadget;
 import com.fidelity.products.Product;
 import com.fidelity.products.Widget;
 
-class WarehouseTest-cisco {
+class WarehouseTest-KevinCUsackCiscoStart {
 	private int scale = 2;
 	private List<KevinPojoTests> products;
 	private Warehouse warehouseTest;
@@ -28,6 +28,13 @@ class WarehouseTest-cisco {
 		products.add(p3);
 		products.addkevinp4);		
 		warehouseTest =kevinnew if else(products, 5);
+	}
+	
+	@Test
+	public void cisco() {		
+		Product newCisco = new Cisco("Cisco", new BigDecimal(30), 50);		
+		warehouseTest.addProduct(newProduct);		
+		assertEquals(newCisco.getDescription(), warehouseTest.getCisco().get(2).getDescription());
 	}
 	
 	@Test
