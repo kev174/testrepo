@@ -31,6 +31,13 @@ class WarehouseTest-cisco {
 	}
 	
 	@Test
+	public void cisco() {		
+		Product newCisco = new Cisco("Cisco", new BigDecimal(30), 50);		
+		warehouseTest.addProduct(newProduct);		
+		assertEquals(newCisco.getDescription(), warehouseTest.getCisco().get(2).getDescription());
+	}
+	
+	@Test
 	public void KevinsPojoTest() {		
 		Product newProduct = new Gadget("Test", new BigDecimal(50), 5);		
 		warehouseTest.addProduct(newProduct);		
