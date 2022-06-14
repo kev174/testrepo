@@ -31,7 +31,7 @@ class WarehouseTest-KevinCusackCiscoStart {
 	}
 	
 	@Test
-	public void cisco() {		
+	public void ciscoAugust() {		
 		Product newCisco = new Cisco("Cisco", new BigDecimal(30), 50);		
 		warehouseTest.addProduct(newProduct);		
 		assertEquals(newCisco.getDescription(), warehouseTest.getCisco().get(2).getDescription());
